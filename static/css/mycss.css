@@ -1,0 +1,208 @@
+/*页面样式*/
+.container {
+  /* background-color: #ffffff; */
+  box-sizing: border-box;
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: aliceblue;
+  /* height: 4rem !important; */
+}
+
+html {
+  font-size: 62.5%; /*10 ÷ 16 × 100% = 62.5%*/
+}
+
+body, div, ul, ol, dl, dt, dd, li, dl, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font: 12px/22px "\5B8B\4F53", Arial, Helvetica, sans-serif
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+body {
+  color: #000000;
+  background: #FFF;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+  height: 1px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #BA2636;
+  text-decoration: underline;
+}
+
+.content {
+  /* margin: 20px 20px 0 20px; */
+}
+
+.el-main, .el-header, .el-footer {
+  padding: 0 0 !important;
+  margin: 0 0 !important;
+}
+
+.login_input {
+  width: 20rem !important;
+  height: 4rem !important;
+  margin: .5rem;
+  line-height: 3rem !important;
+  text-align: center !important;
+}
+
+.icon {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+
+}
+
+.button1 {
+  width: 20rem !important;
+  height: 3.5rem !important;
+  background-color: white !important;
+  color: #000 !important;
+  border: 1px #409EFF solid !important;
+}
+
+.menu_list {
+  width: 33.3%;
+  border-top: 1px aliceblue solid;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list_img {
+  margin-top: 2rem;
+}
+
+.menu2 {
+  margin: 1rem 0 !important;
+  border: 1px #409EFF solid !important;
+  border-radius: 10px;
+  height: 3rem;
+  justify-content: space-between;
+  overflow: hidden !important;
+}
+
+.menu2 > .menu_list {
+  height: 3rem !important;
+  border-top: 0 aliceblue solid;
+}
+
+.menu2 > .menu_list > p {
+  line-height: 3rem !important;
+}
+
+.menu2 > .is-active {
+  background-color: #409EFF !important;
+  color: white !important;
+}
+
+.tableList {
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  /* margin: 0 0 1rem 0; */
+  border-bottom: 1px solid silver;
+  /* border-top: 1px solid silver; */
+  /* background-color: #2bb673; */
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+}
+
+.list {
+  width:12vw;
+  position: absolute;
+  left: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: #409EFF;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list > .listContent {
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 2rem; */
+  /* height: 65%; */
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+
+}
+
+/*滚动条样式*/
+.tableList::-webkit-scrollbar { /*滚动条整体样式*/
+  width: 0; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 0;
+}
+
+.tableList::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 169, 244, 0.2);
+}
+
+.tableList::-webkit-scrollbar-track { /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 169, 244, 0.1);
+}
+.greencolor{
+  background-color: pink !important;
+}
+
+/* 模态框开始时间样式设置 */
+.dialog .el-dialog__body {
+  padding: 0 0;
+  
+}
+.dialog .el-form-item__label{
+  padding-right: 0px;
+}
+.dialog .el-form-item__content{
+  /* margin-bottom: 10px; */
+}
+.dialog .el-dialog{
+  width: 500px;
+}
