@@ -370,6 +370,30 @@ export default new Router({
         }
       },
     {
+      path: '/addTraining',
+      name: 'addTraining',
+      component: resolve => void (require(['@/components/homeMenu/addTraining.vue'], resolve)),
+      meta: {
+        title: '新建培训管理',
+      }
+    },
+    {
+      path: '/changeTrain',
+      name: 'changeTrain',
+      component: resolve => void (require(['@/components/homeMenu/changeTrain.vue'], resolve)),
+      meta: {
+        title: '修改培训管理',
+      }
+    },
+    {
+      path: '/Traindetail',
+      name: 'Traindetail',
+      component: resolve => void (require(['@/components/homeMenu/Traindetail.vue'], resolve)),
+      meta: {
+        title: '培训管理详情',
+      }
+    },
+    {
       path: '/Security',
       name: 'Security',
       component: resolve => void (require(['@/components/homeMenu/Security.vue'], resolve)),

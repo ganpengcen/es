@@ -74,7 +74,7 @@
       this.getProfile();
     },
     methods: {
-      //获取资料  
+      //获取资料
       getProfile() {
         console.log('localStorage.UserProfile',localStorage.UserProfile)
         if(localStorage.UserProfile){
@@ -101,6 +101,7 @@
               type: 'success',
               message: '修改成功'
             });
+            localStorage.setItem('UserProfile',JSON.stringify(params))
             // this.get
           } else {
             this.$message.error(res.data.msg);

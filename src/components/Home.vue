@@ -6,8 +6,10 @@
           <el-row>
             <el-col :span="24">
               <div style="width: 100%;">
-                <img src="../../static/img/scan.png" alt="" height="30px" width="30px" style="display: block;position: absolute;right:5px;top: 5px;z-index: 100" @click="click">
-                <img src="../../static/img/home_banner.png" alt style="height: 6rem;width: 100%" />
+                <div class="scan">
+                  <img src="../../static/img/scan.png" alt="" width="40px" height="40px" style="display: block;margin: 0 auto" @click="click">
+                </div>
+                  <img src="../../static/img/home_banner.png" alt style="height: 6rem;width: 100%" />
               </div>
             </el-col>
             <el-col :span="8">
@@ -73,17 +75,12 @@
             </el-col>
             <el-col :span="8">
               <div class="list_img" @click=" $router.push({path: '/textApply'});">
-                <img src="../../static/img/ic41.png" alt class="img" />
+                <img src="../../static/img/05.png" alt class="img"/>
                 <p>作业申请</p>
               </div>
             </el-col>
-            <!--<el-col :span="8">-->
-              <!--<div class="list_img" @click=" $router.push({path: '/Scan'});">-->
-                <!--<img src="../../static/img/ic41.png" alt class="img" />-->
-                <!--<p>扫一扫</p>-->
-              <!--</div>-->
-            <!--</el-col>-->
           </el-row>
+          <p style="height: 80px"></p>
         </div>
 
         <div v-show="index == 2" class="panel-body">
@@ -243,6 +240,7 @@
 
       </template>
     </el-main>
+
     <el-footer>
       <el-row>
         <el-col :span="24">
@@ -394,12 +392,6 @@
       },
        click() {
        var _that = this;
-         _that.$router.push({
-           name: 'scanPage',
-           query: {
-             ID:  '1df04b9c-69c3-4a5a-af58-db13d3a4e68b'  //res.resultStr
-           }
-         })
        wx.ready(function () {
          wx.scanQRCode({
            needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
@@ -413,7 +405,7 @@
                _that.$router.push({
                  name: 'scanPage',
                  query: {
-                   ID:  '1df04b9c-69c3-4a5a-af58-db13d3a4e68b'  //res.resultStr
+                   ID: res.resultStr
                  }
                })
              },
@@ -423,7 +415,6 @@
          debindss () {
         this.$get(api.userwxunbind + localStorage.openID).then(res=> {
           if(res.data.state == 200){
-            localStorage.openID = ''
             localStorage.AccountID = ''
             localStorage.token = ''
             this.$router.push({path: '/Login'})
@@ -596,7 +587,6 @@
   .mine .panel-body {
     text-align: left;
   }
-
   .mine .panel-body ul li {
     line-height: 40px;
     font-size: 16px;
@@ -632,7 +622,12 @@
     width: 50%;
     margin-bottom: 0.5rem;
   }
-
+.scan{
+  position: absolute;
+  right:2px;
+  top: 2px;
+  z-index: 100
+}
   .menu3 {
     height: 3rem;
     justify-content: space-between;

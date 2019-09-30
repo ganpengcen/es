@@ -1,5 +1,5 @@
 const Host = 'http://acapi.bjjtza.com/';
-// const Host = 'http://quickcq.com:8001/';
+//const Host = 'http://quickcq.com:80/';
 
 export default {
   hostname: Host,

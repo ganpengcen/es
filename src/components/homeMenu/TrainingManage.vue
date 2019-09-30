@@ -309,19 +309,20 @@ export default {
     },
     //打开新建
     newForm() {
-      this.addform = {};
-      this.AttachFiles = []; //清空
-      this.fileList = [];
-      this.orgs = [];
-      this.joinTable = [];
-
-      this.newDialog = true;
-      this.getOrgs(this.orgs);
+      this.$router.push({
+        path:'/addTraining'
+      })
+//      this.addform = {};
+//      this.AttachFiles = []; //清空
+//      this.fileList = [];
+//      this.orgs = [];
+//      this.joinTable = [];
+//      this.newDialog = true;
+//      this.getOrgs(this.orgs);
     },
 
     //新建
     add() {
-
       if( this.addform.Motif=='' ||  this.addform.Motif==null || this.addform.TrainDate ==''||this.addform.TrainDate ==null || this.addform.TrainLong ==''||this.addform.TrainLong ==null|| this.addform.Trainer ==''||this.addform.Trainer ==null){
         this.$message({
           type:'error',
@@ -463,21 +464,27 @@ export default {
 
     //打开修改
     upTrain(ID) {
-      this.changeDialog = true;
-      this.persons = [];
-      this.TrainID = ID;
-      this.getModel(ID);
-      this.$get(api.gettree + "/00000000-0000-0000-0000-000000000000").then(
-        //获取树形接口
-        res => {
-          if (res.data.state == 200) {
-            this.orgs = res.data.data;
-            // console.log("org",this.orgs)
-          } else {
-            this.$message.error(res.data.msg);
-          }
+      this.$router.push({
+        name:'changeTrain',
+        query:{
+          ID:ID
         }
-      );
+      })
+//      this.changeDialog = true;
+//      this.persons = [];
+//      this.TrainID = ID;
+//      this.getModel(ID);
+//      this.$get(api.gettree + "/00000000-0000-0000-0000-000000000000").then(
+//        //获取树形接口
+//        res => {
+//          if (res.data.state == 200) {
+//            this.orgs = res.data.data;
+//            // console.log("org",this.orgs)
+//          } else {
+//            this.$message.error(res.data.msg);
+//          }
+//        }
+//      );
     },
     //获取模型
     getModel(ID) {

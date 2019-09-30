@@ -97,7 +97,7 @@
             localStorage.AccountID = res.data.data.AccountID;
             console.log("token",localStorage.token)
             console.log("AccountID",localStorage.AccountID)
-           // this.$router.push({path: '/'});
+            this.$router.push({path: '/'});
         }
         })
       },
@@ -114,7 +114,6 @@
           if (res.data.state === 200) {
             this.login();   // this.$root.push({path:'/'});
           } else {
-
             this.$message.error(res.data.msg);
           }
         })
